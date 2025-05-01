@@ -4,7 +4,7 @@
 
 **Project Description**: 
 
-**Project Goals**: Learn and understand the Java runtime envoirnment and utilize it to create a number guessing game.
+**Project Goals**: Learn and understand the Java runtime envoirnment and utilize such knowledge to create a dynamic number guessing game.
 
 ## Instructions for Build and Use
 
@@ -32,8 +32,8 @@ To recreate the development environment, you need the following software and/or 
 
 I found these websites useful in developing this software:
 
-* [Website Title](Link)
-*
+* [Java Tutorial - W3Schools](https://www.w3schools.com/java/default.asp)
+* [Random Number Library in Java - GeeksforGeeks](https://www.geeksforgeeks.org/generating-random-numbers-in-java/)
 *
 
 ## Future Work
