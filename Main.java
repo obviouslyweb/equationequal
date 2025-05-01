@@ -1,4 +1,3 @@
-import java.util.Random;
 import java.util.Scanner;
 
 public class Main {
@@ -17,45 +16,34 @@ public class Main {
             Menu.DisplayMenu(); // Display menu
             String userInput = scanner.nextLine(); // Obtain user input
             
-            if ( 1 == Integer.parseInt(userInput) ) {
-                GameLoop(scanner);  
+            if ( 0 == Integer.parseInt(userInput) ) {
+                menuActive = false;
+            } else if ( 1 == Integer.parseInt(userInput) ) {
+                Guesser.GameLoop(scanner); 
+            } else if ( 2 == Integer.parseInt(userInput) ) {
+                Settings(scanner);
             } else {
-                System.out.println("Incorrect");
+                System.out.println("Unacceptable input; please try again.");
             }
         }
         scanner.close();
     }
 
-    public static void GameLoop(Scanner scanner)
+    public static void Settings(Scanner scanner)
     {
-        Random rand_1 = new Random(); // Random object creator
-        boolean GameActive = true; // Game loop boolean
-        int number = rand_1.nextInt(3); // Generate guessing number
-        int guesses = 0; // Guess counter
+        while ( true ) {
 
-        System.out.println("A random number between 0 and 2 has been chosen.");
+            Menu.DisplaySettings();
+            String userInput = scanner.nextLine();
 
-        while ( GameActive ) { // While game is active...
-
-            // System.out.println(number);
-            System.out.print("Guess a number: ");
-            String userInput = scanner.nextLine(); // Obtain user guess
-                
-            if ( number == Integer.parseInt(userInput) ) {
-                guesses++;
-                GameActive = false;
+            if ( 0 == Integer.parseInt(userInput) ) {
+                break;
             } else {
-                if ( number > Integer.parseInt(userInput)) {
-                    System.out.println("Higher!");
-                } else {
-                    System.out.println("Lower!");
+                if ( 1 == Integer.parseInt(userInput)) {
+                    // Option
                 }   
-                guesses++;
             }
         }
-
-        System.out.println("You got it! It took you " + guesses + " guesses to find the answer.");
-
     }
 
     // Likely more here eventually

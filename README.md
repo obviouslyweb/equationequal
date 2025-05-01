@@ -33,7 +33,7 @@ To recreate the development environment, you need the following software and/or 
 I found these websites useful in developing this software:
 
 * [Java Tutorial - W3Schools](https://www.w3schools.com/java/default.asp)
-* [Random Number Library in Java - GeeksforGeeks](https://www.geeksforgeeks.org/generating-random-numbers-in-java/)
+* [Random Number Library in Java - GeeksforGeeks](https://www.geeksforgeeks.org generating-random-numbers-in-java/)
 *
 
 ## Future Work
