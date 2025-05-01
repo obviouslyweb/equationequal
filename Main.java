@@ -43,7 +43,7 @@ public class Main {
                 break;
             } else {
                 if ( 1 == Integer.parseInt(userInput)) {
-                    // Option
+                    Guesser.SetBounds(scanner);
                 }   
             }
         }

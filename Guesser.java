@@ -38,4 +38,17 @@ public class Guesser {
 
     }
 
+    public static void SetBounds(Scanner scanner) {
+        System.out.print("Please type the bottom bound ( i.e. Guess from _ to 10): ");
+        int BottomBoundPotential = Integer.parseInt(scanner.nextLine());
+        System.out.print("Please type the top bound ( i.e. Guess from 0 to _ ): ");
+        int TopBoundPotential = Integer.parseInt(scanner.nextLine());
+        if ( BottomBoundPotential >= TopBoundPotential ) {
+            System.out.println("ERROR: Unable to set bounds!" + BottomBound + " is larger (or equal to) " + TopBound + ".\nPlease try again with a bottom bound that is LOWER than the top bound.\n");
+        } else {
+            BottomBound = BottomBoundPotential;
+            TopBound = TopBoundPotential;
+            System.out.println("Random number generator bounds set to " + BottomBound + " and " + TopBound + ".\n");
+        }
+    }
 }
