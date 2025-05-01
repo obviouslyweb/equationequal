@@ -34,12 +34,11 @@ I found these websites useful in developing this software:
 
 * [Java Tutorial - W3Schools](https://www.w3schools.com/java/default.asp)
 * [Random Number Library in Java - GeeksforGeeks](https://www.geeksforgeeks.org generating-random-numbers-in-java/)
-*
 
 ## Future Work
 
 The following items I plan to fix, improve, and/or add to this project in the future:
 
-* [ ] First thing here
-* [ ]
-* [ ]
+* [ ] Verify integer input to prevent errors
+* [ ] Equation functionality for guessing
+* [ ] Data structure from Java Collection Framework (such as ArrayList, TreeSet, or HashMap) for equation storage

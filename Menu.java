@@ -10,9 +10,9 @@ public class Menu {
                 "\nSelection: ";
     private static String Menu2 = "";
     private static String SettingsMenu1 = 
-                "--- Options Menu ---\\n" +
-                "0) Return to main menu\\n" +
-                "1) Change number bounds\\n" +
+                "--- Options Menu ---\n" +
+                "0) Return to main menu\n" +
+                "1) Change number bounds\n" +
                 "Selection: ";
     
     // Module declaration

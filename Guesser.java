@@ -34,7 +34,7 @@ public class Guesser {
             }
         }
 
-        System.out.println("You got it! It took you " + guesses + " guesses to find the answer.");
+        System.out.println("You got it! It took you " + guesses + " guesses to find the answer.\n");
 
     }
 
