@@ -10,32 +10,31 @@ public class Main {
 
     public static void main(String[] args)
     {
-        Scanner scan_menu = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
 
         while ( menuActive )
         {
             Menu.DisplayMenu(); // Display menu
-            String userInput = scan_menu.nextLine(); // Obtain user input
+            String userInput = scanner.nextLine(); // Obtain user input
             
             if ( 1 == Integer.parseInt(userInput) ) {
-                GameLoop();  
+                GameLoop(scanner);  
             } else {
                 System.out.println("Incorrect");
             }
         }
-        scan_menu.close();
+        scanner.close();
     }
 
-    public static void GameLoop()
+    public static void GameLoop(Scanner scanner)
     {
-        Scanner scan_game = new Scanner(System.in);
         Random rand_1 = new Random();
 
         int number = rand_1.nextInt(3); // Generate number
             
         System.out.println(number); // Print number DEV TEST
             
-        String userInput = scan_game.nextLine(); // Obtain user guess
+        String userInput = scanner.nextLine(); // Obtain user guess
             
         if ( number == Integer.parseInt(userInput) ) {
              System.out.println("Correct");
@@ -43,6 +42,5 @@ public class Main {
              System.out.println("Incorrect");
         }
 
-        scan_game.close();
     }
 }
