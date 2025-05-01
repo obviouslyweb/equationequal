@@ -28,19 +28,36 @@ public class Main {
 
     public static void GameLoop(Scanner scanner)
     {
-        Random rand_1 = new Random();
+        Random rand_1 = new Random(); // Random object creator
+        boolean GameActive = true; // Game loop boolean
+        int number = rand_1.nextInt(3); // Generate guessing number
+        int guesses = 0; // Guess counter
 
-        int number = rand_1.nextInt(3); // Generate number
-            
-        System.out.println(number); // Print number DEV TEST
-            
-        String userInput = scanner.nextLine(); // Obtain user guess
-            
-        if ( number == Integer.parseInt(userInput) ) {
-             System.out.println("Correct");
-        } else {
-             System.out.println("Incorrect");
+        System.out.println("A random number between 0 and 2 has been chosen.");
+
+        while ( GameActive ) { // While game is active...
+
+            // System.out.println(number);
+            System.out.print("Guess a number: ");
+            String userInput = scanner.nextLine(); // Obtain user guess
+                
+            if ( number == Integer.parseInt(userInput) ) {
+                guesses++;
+                GameActive = false;
+            } else {
+                if ( number > Integer.parseInt(userInput)) {
+                    System.out.println("Higher!");
+                } else {
+                    System.out.println("Lower!");
+                }   
+                guesses++;
+            }
         }
 
+        System.out.println("You got it! It took you " + guesses + " guesses to find the answer.");
+
     }
+
+    // Likely more here eventually
+
 }
