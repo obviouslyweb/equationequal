@@ -41,4 +41,6 @@ The following items I plan to fix, improve, and/or add to this project in the fu
 
 * [ ] Verify integer input to prevent errors
 * [ ] Equation functionality for guessing
-* [ ] Data structure from Java Collection Framework (such as ArrayList, TreeSet, or HashMap) for equation storage
+* [ ] Data structure from Java Collection Framework (ArrayList, TreeSet, or HashMap) for equation storage
+* [ ] Implement reading/writing to file as options.txt
+* [ ] STRETCH: Modify your program to create an interface using 'implements'.
