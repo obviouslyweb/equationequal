@@ -10,7 +10,7 @@ public class Menu {
     private static String SettingsMenu1 = 
                 "\n[--- Options Menu ---]\n" +
                 "0) Return to main menu\n" +
-                "1) Change number bounds\n" +
+                "1) Change number selection bounds\n" +
                 "Selection: ";
     
     // Module declaration
