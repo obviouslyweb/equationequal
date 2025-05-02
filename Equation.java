@@ -4,8 +4,8 @@ import java.util.concurrent.ThreadLocalRandom;
 public class Equation {
 
     // Attribute declaration
-    private int firstnum;
-    private String operator;
+    private int firstnum; // 0-10
+    private String operator; // +, -, *, /
     private int secondnum; // 0-10
     private int hiddennum; // 0-2, 3 for operator
     private static int topbound = 10;
@@ -25,6 +25,11 @@ public class Equation {
         } else if ( operatorcheck == 3 ) {
             operator = "/";
         }
+
+        // Divide by 0 handler
+        if ( ( secondnum == 0 ) && ( operator == "/" )) {
+            secondnum = 1;
+        }
         hiddennum = ThreadLocalRandom.current().nextInt(3);
     }
     
@@ -43,6 +48,9 @@ public class Equation {
             } else if (operator.equals("*")) {
                 result = String.valueOf(firstnum * secondnum);
             } else if (operator.equals("/")) {
+                if ( secondnum == 0 ) {
+                    secondnum = 1;
+                }
                 result = String.valueOf(firstnum / secondnum);
             } else {
                 System.out.print("This is an error: the operator could not be handled. Please notify me if you see this!");
@@ -67,6 +75,9 @@ public class Equation {
             } else if (operator.equals("*")) {
                 result = String.valueOf(firstnum * secondnum);
             } else if (operator.equals("/")) {
+                if ( secondnum == 0 ) {
+                    secondnum = 1;
+                }
                 result = String.valueOf(firstnum / secondnum);
             } else {
                 System.out.print("This is an error: the operator could not be handled. Please notify me if you see this!");
@@ -94,6 +105,9 @@ public class Equation {
             } else if (operator.equals("*")) {
                 return (answer == firstnum * secondnum);
             } else if (operator.equals("/")) {
+                if ( secondnum == 0 ) {
+                    secondnum = 1;
+                }
                 return (answer == firstnum / secondnum);
             } else {
                 System.out.print("This is an error: the equation evaluator could not compute (1). Please notify me if you see this!");

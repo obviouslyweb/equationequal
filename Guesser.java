@@ -13,7 +13,7 @@ public class Guesser {
 
         while ( GameActive ) { // While game is active...
             Equation question = new Equation(); // Create equation for guess
-            question.DisplayEquation(false);
+            question.DisplayEquation(true);
             System.out.println();
             int userInput = InputHandler.ObtainIntInput(scanner, 0);
                 

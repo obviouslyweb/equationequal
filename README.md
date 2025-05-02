@@ -39,10 +39,9 @@ I found these websites useful in developing this software:
 
 The following items I plan to fix, improve, and/or add to this project in the future:
 
-* [ ] Handler for divide-by-zero (30 min)
-* [ ] Handler for dividing equations (30 min)
-* [ ] Determine game exit mode, results page
+* [ ] Determine game exit mode, results page (30 min)
 * [ ] Data structure from Java Collection Framework (ArrayList, TreeSet, or HashMap) for equation storage (1+ hr)
 * [ ] Implement reading/writing to file as options.txt (1+ hr)
 * [ ] Add interface using 'implements'. (1+ hr)
 * [ ] Complete program documentation. (30 min)
+* [ ] Handler for dividing equations (30 min)
