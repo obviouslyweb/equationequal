@@ -1,17 +1,20 @@
+import java.util.Scanner;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class Equation {
 
     // Attribute declaration
-    private int firstnum = 1;
+    private int firstnum;
     private String operator;
-    private int secondnum = 1;
-    private int hiddennum = 0; // 0-2, 3 for operator
+    private int secondnum; // 0-10
+    private int hiddennum; // 0-2, 3 for operator
+    private static int topbound = 10;
+    private static int bottombound = 0;
     
     // Constructor declaration
     public Equation() {
-        firstnum = ThreadLocalRandom.current().nextInt(10);
-        secondnum = ThreadLocalRandom.current().nextInt(10);
+        firstnum = ThreadLocalRandom.current().nextInt(topbound) - bottombound;
+        secondnum = ThreadLocalRandom.current().nextInt(topbound) - bottombound;
         int operatorcheck = ThreadLocalRandom.current().nextInt(4);
         if ( operatorcheck == 0 ) {
             operator = "+";
@@ -22,7 +25,7 @@ public class Equation {
         } else if ( operatorcheck == 3 ) {
             operator = "/";
         }
-        hiddennum = ThreadLocalRandom.current().nextInt(2);
+        hiddennum = ThreadLocalRandom.current().nextInt(3);
     }
     
     // Module declaration
@@ -101,6 +104,20 @@ public class Equation {
         } else {
             System.out.print("This is an error: the equation evaluator could not compute (2). Please notify me if you see this!");
             return true;
+        }
+    }
+
+    public static void SetBounds(Scanner scanner) {
+        System.out.print("Please type the bottom bound (i.e. numbers from __ to 10): ");
+        int BottomBoundPotential = InputHandler.ObtainIntInput(scanner, 0);
+        System.out.print("Please type the top bound (i.e. numbers from 1 to __): ");
+        int TopBoundPotential = InputHandler.ObtainIntInput(scanner, 0);
+        if ( BottomBoundPotential >= TopBoundPotential ) {
+            System.out.println("ERROR: Unable to set bounds!" + bottombound + " is larger (or equal to) " + topbound + ".\nPlease try again with a bottom bound that is LOWER than the top bound.\n");
+        } else {
+            bottombound = BottomBoundPotential;
+            topbound = TopBoundPotential;
+            System.out.println("Random number generator bounds set to " + bottombound + " and " + topbound + ".\n");
         }
     }
 }

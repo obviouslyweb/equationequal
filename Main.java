@@ -46,7 +46,7 @@ public class Main {
                 break;
             } else {
                 if ( 1 == userInput ) {
-                    Guesser.SetBounds(scanner);
+                    Equation.SetBounds(scanner);
                 }   
             }
         }
