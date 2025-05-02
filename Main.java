@@ -25,6 +25,9 @@ public class Main {
                 Guesser.GameLoop(scanner); 
             } else if ( 2 == Integer.parseInt(userInput) ) {
                 Settings(scanner);
+            } else if ( 10 == Integer.parseInt(userInput) ) {
+                Equation demo_equation = new Equation();
+                demo_equation.DisplayEquation(true);;
             } else {
                 System.out.println("Unacceptable input; please try again.");
             }
