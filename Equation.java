@@ -71,7 +71,7 @@ public class Equation {
             }
 
             if (hiddennum == 2) {
-                result = "[#" + result + "]";
+                result = "[" + result + "]";
             }
 
             System.out.print(first + " " + middle + " " + second + " = " + result);

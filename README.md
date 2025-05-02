@@ -16,7 +16,7 @@ Steps to build and/or run the software:
 
 Instructions for using the software:
 
-1. First step here
+1. Download the software
 2.
 3.
 
@@ -39,8 +39,10 @@ I found these websites useful in developing this software:
 
 The following items I plan to fix, improve, and/or add to this project in the future:
 
-* [ ] Verify integer input to prevent errors
-* [ ] Handler for divide-by-zero
-* [ ] Data structure from Java Collection Framework (ArrayList, TreeSet, or HashMap) for equation storage
-* [ ] Implement reading/writing to file as options.txt
-* [ ] Add interface using 'implements'.
+* [ ] Resolve result number not being chosen as the hidden number
+* [ ] Verify integer input to prevent errors (30 min)
+* [ ] Handler for divide-by-zero (30 min)
+* [ ] Data structure from Java Collection Framework (ArrayList, TreeSet, or HashMap) for equation storage (1+ hr)
+* [ ] Implement reading/writing to file as options.txt (1+ hr)
+* [ ] Add interface using 'implements'. (1+ hr)
+* [ ] Complete program documentation. (30 min)

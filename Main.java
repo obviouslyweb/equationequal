@@ -17,15 +17,15 @@ public class Main {
         while ( menuActive )
         {
             Menu.DisplayMenu(); // Display menu
-            String userInput = scanner.nextLine(); // Obtain user input
+            int userInput = InputHandler.ObtainIntInput(scanner, 1);
             
-            if ( 0 == Integer.parseInt(userInput) ) {
+            if ( 0 == userInput ) {
                 menuActive = false;
-            } else if ( 1 == Integer.parseInt(userInput) ) {
+            } else if ( 1 == userInput ) {
                 Guesser.GameLoop(scanner); 
-            } else if ( 2 == Integer.parseInt(userInput) ) {
+            } else if ( 2 == userInput ) {
                 Settings(scanner);
-            } else if ( 10 == Integer.parseInt(userInput) ) {
+            } else if ( 10 == userInput ) {
                 Equation demo_equation = new Equation();
                 demo_equation.DisplayEquation(true);;
             } else {
@@ -40,18 +40,16 @@ public class Main {
         while ( true ) {
 
             Menu.DisplaySettings();
-            String userInput = scanner.nextLine();
+            int userInput = InputHandler.ObtainIntInput(scanner, 1);
 
-            if ( 0 == Integer.parseInt(userInput) ) {
+            if ( 0 == userInput ) {
                 break;
             } else {
-                if ( 1 == Integer.parseInt(userInput)) {
+                if ( 1 == userInput ) {
                     Guesser.SetBounds(scanner);
                 }   
             }
         }
     }
-
-    // Likely more here eventually
 
 }
