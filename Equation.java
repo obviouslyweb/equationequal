@@ -130,16 +130,25 @@ public class Equation {
     }
 
     public static void SetBounds(Scanner scanner) {
-        System.out.print("Please type the bottom bound (i.e. numbers from __ to 10): ");
+        System.out.print("\nPlease type the bottom bound (i.e. numbers from __ to 10): ");
         int BottomBoundPotential = InputHandler.ObtainIntInput(scanner, 0);
         System.out.print("Please type the top bound (i.e. numbers from 1 to __): ");
         int TopBoundPotential = InputHandler.ObtainIntInput(scanner, 0);
         if ( BottomBoundPotential >= TopBoundPotential ) {
-            System.out.println("ERROR: Unable to set bounds!" + bottombound + " is larger (or equal to) " + topbound + ".\nPlease try again with a bottom bound that is LOWER than the top bound.\n");
+            System.out.println("\nERROR: Unable to set bounds! " + bottombound + " is larger (or equal to) " + topbound + ".\nPlease try again with a bottom bound that is LOWER than the top bound.\n");
         } else {
             bottombound = BottomBoundPotential;
             topbound = TopBoundPotential;
-            System.out.println("Random number generator bounds set to " + bottombound + " and " + topbound + ".\n");
+            SaveLoad.UpdateOptions(TopBoundPotential, BottomBoundPotential);
+            System.out.println("Random number generator bounds set to " + bottombound + " and " + topbound + ".");
         }
+    }
+
+    public static void SetTopBound(int number) {
+        topbound = number;
+    }
+
+    public static void SetBottomBound(int number) {
+        bottombound = number;
     }
 }

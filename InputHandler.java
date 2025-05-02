@@ -8,8 +8,13 @@ public class InputHandler {
             
             String userInput = scanner.nextLine();
 
-            if ( VerifyInput(userInput) ) {
-                return Integer.parseInt(userInput);
+            if (VerifyInput(userInput)) {
+                int value = Integer.parseInt(userInput);
+                if (value < 0) {
+                    System.out.println("Negative numbers are not allowed; please enter a non-negative integer.");
+                } else {
+                    return value;
+                }
             } else {
                 System.out.println("That is not an acceptable input; please type an integer.");
                 if ( messageType == 1 ) {
