@@ -1,10 +1,10 @@
 ## Overview
 
-**Project Title**: Number Guesser
+**Project Title**: SprintSquared
 
 **Project Description**: 
 
-**Project Goals**: Learn and understand the Java runtime envoirnment and utilize such knowledge to create a dynamic number guessing game.
+**Project Goals**: Learn and understand the Java runtime envoirnment and utilize such knowledge to create a dynamic math equation game.
 
 ## Instructions for Build and Use
 
@@ -40,7 +40,7 @@ I found these websites useful in developing this software:
 The following items I plan to fix, improve, and/or add to this project in the future:
 
 * [ ] Verify integer input to prevent errors
-* [ ] Equation functionality for guessing
+* [ ] Handler for divide-by-zero
 * [ ] Data structure from Java Collection Framework (ArrayList, TreeSet, or HashMap) for equation storage
 * [ ] Implement reading/writing to file as options.txt
-* [ ] STRETCH: Modify your program to create an interface using 'implements'.
+* [ ] Add interface using 'implements'.
