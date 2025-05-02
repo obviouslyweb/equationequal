@@ -9,15 +9,16 @@ public class Guesser {
         boolean GameActive = true; // Game loop boolean
         int guesses = 0; // Guess counter
         int corrects = 0;
-        int incorrects = 0;
 
         while ( GameActive ) { // While game is active...
             Equation question = new Equation(); // Create equation for guess
             question.DisplayEquation(true);
             System.out.println();
-            int userInput = InputHandler.ObtainIntInput(scanner, 0);
+            String userInput = InputHandler.ObtainGameInput(scanner);
                 
-            if ( question.EvaluateEquation(userInput) ) {
+            if ( userInput == "end" ) {
+                GameActive = false;
+            } else if ( question.EvaluateEquation(Integer.parseInt(userInput)) ) {
                 guesses++;
                 corrects++;
                 System.out.println("Correct!\n");
@@ -25,13 +26,10 @@ public class Guesser {
             } else {
                 System.out.println("Incorrect. Try again!\n");
                 guesses++;
-                incorrects++;
             }
         }
-
-        System.out.println("You got it! It took you " + guesses + " guesses to find the answer.\n");
-
+        // END RESULTS
+        System.out.println("RESULTS\n" + guesses + " total questions\n" + corrects + " correct answers\n" + (corrects / guesses) + "% correct\n\nPress any key to proceed. ");
+        scanner.nextLine();
     }
-
-    
 }

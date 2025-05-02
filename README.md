@@ -44,4 +44,3 @@ The following items I plan to fix, improve, and/or add to this project in the fu
 * [ ] Implement reading/writing to file as options.txt (1+ hr)
 * [ ] Add interface using 'implements'. (1+ hr)
 * [ ] Complete program documentation. (30 min)
-* [ ] Handler for dividing equations (30 min)

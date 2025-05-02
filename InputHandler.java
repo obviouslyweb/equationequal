@@ -9,15 +9,16 @@ public class InputHandler {
     public static int ObtainIntInput(Scanner scanner, int messageType)
     {
         while ( true ) {
+            
             String userInput = scanner.nextLine();
 
-            if ( VerifyInput(userInput ) ) {
+            if ( VerifyInput(userInput) ) {
                 return Integer.parseInt(userInput);
             } else {
                 System.out.println("That is not an acceptable input; please type an integer.");
                 if ( messageType == 1 ) {
                     System.out.print("Selection: ");
-                }
+                }  
             }
         }
     }
@@ -29,6 +30,24 @@ public class InputHandler {
             return true;
         } catch (NumberFormatException e) {
             return false;
+        }
+    }
+
+    public static String ObtainGameInput(Scanner scanner)
+    {
+        while ( true ) {
+            
+            String userInput = scanner.nextLine();
+
+            if ( VerifyInput(userInput) ) {
+                return userInput;
+            } else {
+                if ( userInput == "end" ) {
+                    return userInput;
+                } else {
+                    System.out.println("That is not an acceptable input; please type an integer.");
+                }
+            }
         }
     }
 }
