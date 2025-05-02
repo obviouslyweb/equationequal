@@ -4,7 +4,7 @@ public class Guesser {
 
     public static void GameLoop(Scanner scanner)
     {
-        System.out.println("\nType the missing number for the answer for the given equations.\n");
+        System.out.println("\nType the missing number for the answer for the given equations.\nType 'end' to end the game.\n");
 
         boolean GameActive = true; // Game loop boolean
         int guesses = 0; // Guess counter
@@ -16,7 +16,7 @@ public class Guesser {
             System.out.println();
             String userInput = InputHandler.ObtainGameInput(scanner);
                 
-            if ( userInput == "end" ) {
+            if ( userInput.equalsIgnoreCase("end") ) {
                 GameActive = false;
             } else if ( question.EvaluateEquation(Integer.parseInt(userInput)) ) {
                 guesses++;
@@ -29,7 +29,12 @@ public class Guesser {
             }
         }
         // END RESULTS
-        System.out.println("RESULTS\n" + guesses + " total questions\n" + corrects + " correct answers\n" + (corrects / guesses) + "% correct\n\nPress any key to proceed. ");
+        if ( guesses == 0 ) {
+            System.out.println("\nGame ended early.\nPress ENTER key to proceed. ");
+        } else {
+            System.out.println("RESULTS\n" + guesses + " total questions\n" + corrects + " correct answers\n" + ((corrects * 100) / guesses) + "% correct\n\nPress ENTER key to proceed. ");
+        }
+        
         scanner.nextLine();
     }
 }

@@ -41,5 +41,6 @@ The following items I plan to fix, improve, and/or add to this project in the fu
 
 * [ ] Data structure from Java Collection Framework (ArrayList, TreeSet, or HashMap) for equation storage (1+ hr)
 * [ ] Implement reading/writing to file as options.txt (1+ hr)
+* [ ] Fix dividing handling ( 4 / [] = 1, inputting "4" is somehow incorrect?)
 * [ ] Add interface using 'implements'. (1+ hr)
 * [ ] Complete program documentation. (30 min)

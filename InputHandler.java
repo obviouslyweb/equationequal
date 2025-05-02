@@ -2,10 +2,6 @@ import java.util.Scanner;
 
 public class InputHandler {
 
-    private InputHandler() {
-        // Prevent instantiation
-    }
-
     public static int ObtainIntInput(Scanner scanner, int messageType)
     {
         while ( true ) {
@@ -42,7 +38,7 @@ public class InputHandler {
             if ( VerifyInput(userInput) ) {
                 return userInput;
             } else {
-                if ( userInput == "end" ) {
+                if ( userInput.equals("end")) {
                     return userInput;
                 } else {
                     System.out.println("That is not an acceptable input; please type an integer.");

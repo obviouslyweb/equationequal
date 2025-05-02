@@ -93,10 +93,18 @@ public class Equation {
     }
 
     public boolean EvaluateEquation(int answer) {
-        if ( hiddennum == 0 ) {
-            return ( answer == firstnum );
+        if ( hiddennum == 0 ) {;
+            if ( (secondnum == 0) && ( operator.equals("*")) ) {
+                return true;
+            } else {
+                return ( answer == firstnum );
+            }
         } else if ( hiddennum == 1 ) {
-            return ( answer == secondnum );
+            if ( (firstnum == 0) && ( operator.equals("*")) ) {
+                return true;
+            } else {
+                return ( answer == secondnum );
+            }
         } else if ( hiddennum == 2 ) {
             if (operator.equals("+")) {
                 return (answer == firstnum + secondnum);
