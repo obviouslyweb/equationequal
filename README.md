@@ -39,7 +39,6 @@ I found these websites useful in developing this software:
 
 The following items I plan to fix, improve, and/or add to this project in the future:
 
-* [ ] Determine game exit mode, results page (30 min)
 * [ ] Data structure from Java Collection Framework (ArrayList, TreeSet, or HashMap) for equation storage (1+ hr)
 * [ ] Implement reading/writing to file as options.txt (1+ hr)
 * [ ] Add interface using 'implements'. (1+ hr)
