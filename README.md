@@ -1,22 +1,22 @@
 ## Overview
 
-**Project Title**: SprintSquared
+**Project Title**: EquationEqual
 
-**Project Description**: 
+**Project Description**: EquationEqual is a math equation quizzer, allowing you to test your knowledge on short math problems. The game will continue to prompt and quiz you on simple "number operator number" style math questions, asking you to fill in the missing number. You can customize the bounds of the problems generated, as well as reattempt missed problems. The bounds you set and any missed questions you have are saved to your computer, allowing you to return and reattempt between sessions.
 
-**Project Goals**: Learn and understand the Java runtime envoirnment and utilize such knowledge to create a dynamic math equation game.
+**Project Goals**: Learn and understand the Java runtime envoirnment and utilize such knowledge to create a dynamic math equation game with save/load functionality.
 
 ## Instructions for Build and Use
 
 Steps to build and/or run the software:
 
-1. First step here
+1. Download the repository contents to your computer
 2.
 3.
 
 Instructions for using the software:
 
-1. Download the software
+1. Once downloaded, open 
 2.
 3.
 
