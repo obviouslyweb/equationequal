@@ -39,8 +39,7 @@ I found these websites useful in developing this software:
 
 The following items I plan to fix, improve, and/or add to this project in the future:
 
-* [ ] Data structure from Java Collection Framework (ArrayList, TreeSet, or HashMap) for equation storage (1+ hr)
+* [ ] Verify equation creation doesn't make impossible to guess questions ( [ ] * 0 = 0 , 0 * [ ] = 0)
 * [ ] Fix dividing handling ( 4 / [] = 1, inputting "4" is somehow incorrect?)
-* [ ] Add interface using 'implements'. (1+ hr)
-* [ ] Complete program documentation. (30 min)
-* [ ] Handle negative numbers. (1+ hr)
+* [ ] Complete program documentation.
+* [ ] Add handling of negative numbers.

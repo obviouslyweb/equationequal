@@ -21,9 +21,15 @@ public class Main {
             if ( 0 == userInput ) {
                 menuActive = false;
             } else if ( 1 == userInput ) {
-                Guesser.GameLoop(scanner); 
+                Guesser.GameLoop(scanner, false); 
             } else if ( 2 == userInput ) {
-                Settings(scanner);
+                if ( Guesser.IsMissedEmpty() == true ){
+                    System.out.println("There are no missed equations yet!");
+                } else {
+                    Guesser.GameLoop(scanner, true);
+                }
+            } else if ( 3 == userInput ) {
+                    Settings(scanner);
             } else if ( 10 == userInput ) {
                 Equation demo_equation = new Equation();
                 demo_equation.DisplayEquation(true);;
@@ -46,7 +52,10 @@ public class Main {
             } else {
                 if ( 1 == userInput ) {
                     Equation.SetBounds(scanner);
-                }   
+                } else if ( 2 == userInput ) {
+                    Guesser.ResetMissedEquations();
+                    System.out.println("Missed equations deleted.");
+                }
             }
         }
     }

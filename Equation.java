@@ -93,40 +93,39 @@ public class Equation {
     }
 
     public boolean EvaluateEquation(int answer) {
-        if ( hiddennum == 0 ) {;
-            if ( (secondnum == 0) && ( operator.equals("*")) ) {
-                return true;
-            } else {
-                return ( answer == firstnum );
-            }
-        } else if ( hiddennum == 1 ) {
-            if ( (firstnum == 0) && ( operator.equals("*")) ) {
-                return true;
-            } else {
-                return ( answer == secondnum );
-            }
-        } else if ( hiddennum == 2 ) {
+        if (answer == ReturnEvaluation()) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public int ReturnEvaluation() {
+        int return_answer;
+        if ( hiddennum == 0 ) {; // First number is hidden "[] + 5 = 7"
+            return_answer = firstnum;
+        } else if ( hiddennum == 1 ) { // Second number is hidden "2 + [] = 7"
+            return_answer = secondnum;
+        } else if ( hiddennum == 2 ) { // Second number is hidden "2 + 5 = []"
             if (operator.equals("+")) {
-                return (answer == firstnum + secondnum);
+                return_answer = firstnum + secondnum;
             } else if (operator.equals("-")) {
-                return (answer == firstnum - secondnum);
+                return_answer = firstnum - secondnum;
             } else if (operator.equals("*")) {
-                return (answer == firstnum * secondnum);
+                return_answer = firstnum * secondnum;
             } else if (operator.equals("/")) {
-                if ( secondnum == 0 ) {
-                    secondnum = 1;
-                }
-                return (answer == firstnum / secondnum);
+                return_answer = firstnum / secondnum;
             } else {
                 System.out.print("This is an error: the equation evaluator could not compute (1). Please notify me if you see this!");
-                return true;
+                return_answer = 0;
             }
-        } else if ( hiddennum == 3 ) {
-            return ( answer == firstnum );
+        } else if ( hiddennum == 3 ) { // Operator is hidden "2 [] 5 = 7"
+            return_answer = firstnum;
         } else {
             System.out.print("This is an error: the equation evaluator could not compute (2). Please notify me if you see this!");
-            return true;
+            return_answer = 0;
         }
+        return return_answer;
     }
 
     public static void SetBounds(Scanner scanner) {
@@ -139,7 +138,7 @@ public class Equation {
         } else {
             bottombound = BottomBoundPotential;
             topbound = TopBoundPotential;
-            SaveLoad.UpdateOptions(TopBoundPotential, BottomBoundPotential);
+            SaveLoad.UpdateOptions(TopBoundPotential, BottomBoundPotential, Guesser.ReturnMissedEquations());
             System.out.println("Random number generator bounds set to " + bottombound + " and " + topbound + ".");
         }
     }
@@ -150,5 +149,32 @@ public class Equation {
 
     public static void SetBottomBound(int number) {
         bottombound = number;
+    }
+
+    public static int GetTopBound() {
+        return topbound;
+    }
+
+    public static int GetBottomBound() {
+        return bottombound;
+    }
+
+    public String SerializeEquation() {
+        return firstnum + "," + operator + "," + secondnum + "," + hiddennum;
+    }
+
+    public static Equation DeserializeEquation(String data) {
+        String[] parts = data.split(",");
+        int firstnum = Integer.parseInt(parts[0]);
+        String operator = parts[1];
+        int secondnum = Integer.parseInt(parts[2]);
+        int hiddennum = Integer.parseInt(parts[3]);
+    
+        Equation equation = new Equation();
+        equation.firstnum = firstnum;
+        equation.operator = operator;
+        equation.secondnum = secondnum;
+        equation.hiddennum = hiddennum;
+        return equation;
     }
 }
