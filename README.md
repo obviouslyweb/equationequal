@@ -23,9 +23,11 @@ Steps to build and/or run the software:
 
 Instructions for using the software:
 
-1. Once the program has started, follow the instructions on the Main Menu
-2.
-3.
+* Once the program has started, use your keyboard to input numbers to select your desired option. 
+* Typing in `1` on the main menu will start the main equation game sequence. During this sequence, answer the questions provided by typing in the number of the missing (bracketed, "[]") number. You can stop the game by typing `end` at any time. Please note that the game **will go forever** until you end it. Once doing so, a results screen will be posted, and any key can be pressed to return to the menu.
+* Typing in `2` on the main menu will start the game sequence, only using questions that you have missed in the main game sequence (through the `1` menu option). This mode will not work if you do not have any missed equations recorded.
+* Typing in `3` on the main menu will take you to a small options menu. Inside, you can edit the bounds that the game will choose for numbers to generate equations from as well as clear the missed equation list (if any are present). Typing `0` in this menu will return you to the main menu.
+* Typing in `0` on the main menu will quit the program.
 
 ## Development Environment 
 
