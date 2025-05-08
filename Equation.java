@@ -13,8 +13,8 @@ public class Equation {
     
     // Constructor declaration
     public Equation() {
-        firstnum = ThreadLocalRandom.current().nextInt(topbound) - bottombound;
-        secondnum = ThreadLocalRandom.current().nextInt(topbound) - bottombound;
+        firstnum = ThreadLocalRandom.current().nextInt(topbound + 1) - bottombound;
+        secondnum = ThreadLocalRandom.current().nextInt(topbound + 1) - bottombound;
         int operatorcheck = ThreadLocalRandom.current().nextInt(4);
         if ( operatorcheck == 0 ) {
             operator = "+";
@@ -32,14 +32,19 @@ public class Equation {
         }
         hiddennum = ThreadLocalRandom.current().nextInt(3);
 
-        fixAmbiguousMultiplication();
+        FixAmbiguousOperation();
     }
 
     // Module declaration
-    private void fixAmbiguousMultiplication() {
+    private void FixAmbiguousOperation() {
         if (operator.equals("*") && (firstnum * secondnum == 0)) {
             if ((hiddennum == 0 && secondnum == 0) || (hiddennum == 1 && firstnum == 0) ) {
                 hiddennum = 2;
+            }
+        } else if (operator.equals("/") && (firstnum / secondnum == 0)) {
+            if ((hiddennum == 0 && secondnum == 0) || (hiddennum == 1 && firstnum == 0) ) {
+                hiddennum = 2;
+                System.out.println("Division fix triggered");
             }
         }
     }
