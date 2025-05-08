@@ -10,13 +10,20 @@
 
 Steps to build and/or run the software:
 
-1. Download the repository contents to your computer
-2.
-3.
+# Using Command Prompt, Terminal, or equivalent
+1. Download the repository contents to your computer. You can either download the repository contents as a .ZIP file, or use git / GitHub Desktop to copy the repository to your device.
+2. Open a Command Prompt, Terminal, or equivalent program on your device.
+3. Navigate to the "equationequal" folder (using `cd` on Windows).
+4. Type `java main.java` to start the program.
+
+# Using Visual Studio Code
+1. Download the repository contents to your computer. You can either download the repository contents as a .ZIP file, or use git / GitHub Desktop to copy the repository to your device.
+2. Open Visual Studio Code, and open the folder containing the project.
+3. Open `main.java` and press the Play button in the upper-right corner. The program will run using the terminal built into Visual Studio Code.
 
 Instructions for using the software:
 
-1. Once downloaded, open 
+1. Once the program has started, follow the instructions on the Main Menu
 2.
 3.
 
