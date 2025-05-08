@@ -43,12 +43,12 @@ I found these websites useful in developing this software:
 
 * [Java Tutorial - W3Schools](https://www.w3schools.com/java/default.asp)
 * [Random Number Library in Java - GeeksforGeeks](https://www.geeksforgeeks.org/generating-random-numbers-in-java/)
+* [Stack Overflow (various threads)](https://stackoverflow.com/questions)
 
 ## Future Work
 
 The following items I plan to fix, improve, and/or add to this project in the future:
 
-* [ ] Verify equation creation doesn't make impossible to guess questions ( [ ] * 0 = 0 , 0 * [ ] = 0)
-* [ ] Fix dividing handling ( 4 / [] = 1, inputting "4" is somehow incorrect?)
-* [ ] Complete program documentation.
-* [ ] Add handling of negative numbers.
+* [ ] Verify equation creation doesn't make impossible to guess questions ( instances like `[ ] * 0 = 0` and `0 * [ ] = 0`).
+* [ ] Fix dividing handling ( ex. `4 / [] = 1`, inputting `4` is somehow incorrect).
+* [ ] Implement the ability to set bounds to negative numbers.
