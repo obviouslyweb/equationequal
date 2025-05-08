@@ -31,9 +31,19 @@ public class Equation {
             secondnum = 1;
         }
         hiddennum = ThreadLocalRandom.current().nextInt(3);
+
+        fixAmbiguousMultiplication();
+    }
+
+    // Module declaration
+    private void fixAmbiguousMultiplication() {
+        if (operator.equals("*") && (firstnum * secondnum == 0)) {
+            if ((hiddennum == 0 && secondnum == 0) || (hiddennum == 1 && firstnum == 0) ) {
+                hiddennum = 2;
+            }
+        }
     }
     
-    // Module declaration
     public void DisplayEquation(boolean hideHidden) {
         if ( hideHidden ) {
             String first = (hiddennum == 0) ? "[_]" : String.valueOf(firstnum);

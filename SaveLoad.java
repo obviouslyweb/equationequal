@@ -46,14 +46,23 @@ public class SaveLoad {
                         int value = Integer.parseInt(parts[1].trim());
                         Equation.SetTopBound(value);
                     } else if (key.equals("missedequations")) {
-                        String[] serializedEquations = parts[1].trim().split(";");
-                        for (String s : serializedEquations) {
-                            if (!s.isBlank()) {
-                                Equation equation = Equation.DeserializeEquation(s);
-                                Guesser.AddToMissedEquations(equation);
+                        if (parts[1] != null)
+                        {
+                            int equationCount = 0;
+                            String[] serializedEquations = parts[1].trim().split(";");
+                            for (String s : serializedEquations) {
+                                if (!s.isBlank()) {
+                                    Equation equation = Equation.DeserializeEquation(s);
+                                    Guesser.AddToMissedEquations(equation);
+                                    equationCount++;
+                                }
                             }
+                            String result = (equationCount == 1) ? "Successfully loaded " + equationCount + " missed equation!" : "Successfully loaded " + equationCount + " missed equations!";
+                            System.out.println(result);
                         }
                     }
+                } else if (parts.length == 1 || parts[0] == "missedequations") {
+                    continue;
                 } else {
                     System.out.println("Invalid line format in 'options.txt': " + line + ". If you see this, please let me know!");
                 }

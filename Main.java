@@ -54,6 +54,7 @@ public class Main {
                     Equation.SetBounds(scanner);
                 } else if ( 2 == userInput ) {
                     Guesser.ResetMissedEquations();
+                    SaveLoad.UpdateOptions(Equation.GetTopBound(), Equation.GetBottomBound(), Guesser.ReturnMissedEquations());
                     System.out.println("Missed equations deleted.");
                 }
             }

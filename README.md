@@ -56,6 +56,6 @@ I found these websites useful in developing this software:
 
 The following items I plan to fix, improve, and/or add to this project in the future:
 
-* [ ] Verify equation creation doesn't make impossible to guess questions ( instances like `[ ] * 0 = 0` and `0 * [ ] = 0`).
+* [X] Verify equation creation doesn't make impossible to guess questions ( instances like `[ ] * 0 = 0` and `0 * [ ] = 0`).
 * [ ] Fix dividing handling ( ex. `4 / [] = 1`, inputting `4` is somehow incorrect).
 * [ ] Implement the ability to set bounds to negative numbers.
