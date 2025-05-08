@@ -10,6 +10,7 @@
 
 Steps to build and/or run the software:
 
+### Using Command Prompt / Terminal
 1. If not already installed, [download and install the most recent version of Java](https://www.java.com/en/download/windows_manual.jsp).
 2. Download the repository contents to your computer. You can either download the repository contents as a .ZIP file, or use git / GitHub Desktop to copy the repository to your device.
 3. Open a Command Prompt, Terminal, or equivalent program on your device.
