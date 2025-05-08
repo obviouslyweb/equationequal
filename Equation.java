@@ -116,31 +116,48 @@ public class Equation {
     }
 
     public int ReturnEvaluation() {
-        int return_answer;
-        if ( hiddennum == 0 ) {; // First number is hidden "[] + 5 = 7"
-            return_answer = firstnum;
-        } else if ( hiddennum == 1 ) { // Second number is hidden "2 + [] = 7"
-            return_answer = secondnum;
-        } else if ( hiddennum == 2 ) { // Second number is hidden "2 + 5 = []"
-            if (operator.equals("+")) {
-                return_answer = firstnum + secondnum;
-            } else if (operator.equals("-")) {
-                return_answer = firstnum - secondnum;
-            } else if (operator.equals("*")) {
-                return_answer = firstnum * secondnum;
-            } else if (operator.equals("/")) {
-                return_answer = firstnum / secondnum;
-            } else {
-                System.out.print("This is an error: the equation evaluator could not compute (1). Please notify me if you see this!");
-                return_answer = 0;
+        try {
+            switch (hiddennum) {
+                case 0: // First number is hidden, [] + 5 = 7
+                    if (operator.equals("+")) 
+                        return Integer.parseInt(String.valueOf(result() - secondnum));
+                    if (operator.equals("-"))
+                        return Integer.parseInt(String.valueOf(result() + secondnum));
+                    if (operator.equals("*"))
+                        return Integer.parseInt(String.valueOf(result() / secondnum));
+                    if (operator.equals("/"))
+                        return Integer.parseInt(String.valueOf(result() * secondnum));
+                    break;
+                case 1: // Second number is hidden, 2 + [] = 7
+                    if (operator.equals("+")) 
+                        return Integer.parseInt(String.valueOf(result() - firstnum));
+                    if (operator.equals("-"))
+                        return Integer.parseInt(String.valueOf(firstnum - result()));
+                    if (operator.equals("*"))
+                        return Integer.parseInt(String.valueOf(result() / firstnum));
+                    if (operator.equals("/"))
+                        return Integer.parseInt(String.valueOf(firstnum / result()));
+                    break;
+                case 2: // Result number is hidden, 2 + 5 = []
+                    return result();
+                case 3: // Operator is hidden, 2 [] 5 = 7
+                    return -1;
+                    // Functionality coming soon; shouldn't be called in current version anyway
             }
-        } else if ( hiddennum == 3 ) { // Operator is hidden "2 [] 5 = 7"
-            return_answer = firstnum;
-        } else {
-            System.out.print("This is an error: the equation evaluator could not compute (2). Please notify me if you see this!");
-            return_answer = 0;
+        } catch (ArithmeticException e) {
+            System.out.println("Math error during evaluation.");
+            return -1;
         }
-        return return_answer;
+        System.out.println("Unknown operator or hiddennum state.");
+        return -1;
+    }
+
+    private int result() {
+        if (operator.equals("+")) return firstnum + secondnum;
+        if (operator.equals("-")) return firstnum - secondnum;
+        if (operator.equals("*")) return firstnum * secondnum;
+        if (operator.equals("/")) return firstnum / secondnum;
+        return -1;
     }
 
     public static void SetBounds(Scanner scanner) {
