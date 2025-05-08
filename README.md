@@ -10,16 +10,17 @@
 
 Steps to build and/or run the software:
 
-### Using Command Prompt, Terminal, or equivalent
-1. Download the repository contents to your computer. You can either download the repository contents as a .ZIP file, or use git / GitHub Desktop to copy the repository to your device.
-2. Open a Command Prompt, Terminal, or equivalent program on your device.
-3. Navigate to the "equationequal" folder (using `cd` on Windows).
-4. Type `java main.java` to start the program.
+1. If not already installed, [download and install the most recent version of Java](https://www.java.com/en/download/windows_manual.jsp).
+2. Download the repository contents to your computer. You can either download the repository contents as a .ZIP file, or use git / GitHub Desktop to copy the repository to your device.
+3. Open a Command Prompt, Terminal, or equivalent program on your device.
+4. Navigate to the "equationequal" folder (using `cd` on Windows).
+5. Type `java main.java` to start the program.
 
 ### Using Visual Studio Code
-1. Download the repository contents to your computer. You can either download the repository contents as a .ZIP file, or use git / GitHub Desktop to copy the repository to your device.
-2. Open Visual Studio Code, and open the folder containing the project.
-3. Open `main.java` and press the Play button in the upper-right corner. The program will run using the terminal built into Visual Studio Code.
+1. If not already installed, [download and install the most recent version of Java](https://www.java.com/en/download/windows_manual.jsp).
+2. Download the repository contents to your computer. You can either download the repository contents as a .ZIP file, or use git / GitHub Desktop to copy the repository to your device.
+3. Open Visual Studio Code, and open the folder containing the project.
+4. Open `main.java` and press the Play button in the upper-right corner. The program will run using the terminal built into Visual Studio Code.
 
 Instructions for using the software:
 
@@ -33,9 +34,14 @@ Instructions for using the software:
 
 To recreate the development environment, you need the following software and/or libraries with the specified versions:
 
-* First thing here
-*
-*
+* [Visual Studio Code](https://code.visualstudio.com/)
+* [Java SE Development Kit 24.0.1 for Windows (x64 installer)](https://www.oracle.com/java/technologies/downloads/?er=221886#jdk24-windows)
+* [Test Runner for Java (VSCode Extension)](https://marketplace.visualstudio.com/items/?itemName=vscjava.vscode-java-test)
+* [Project Manager for Java (VSCode Extension)](https://marketplace.visualstudio.com/items/?itemName=vscjava.vscode-java-dependency)
+* [Maven for Java (VSCode Extension)](https://marketplace.visualstudio.com/items/?itemName=vscjava.vscode-maven)
+* [Language Support for Java by Red Hat (VSCode Extension)](https://marketplace.visualstudio.com/items/?itemName=redhat.java)
+* [Extension Pack for Java (VSCode Extension)](https://marketplace.visualstudio.com/items/?itemName=vscjava.vscode-java-pack) 
+* [Debugger for Java (VSCode Extension)](https://marketplace.visualstudio.com/items/?itemName=vscjava.vscode-java-debug) 
 
 ## Useful Websites to Learn More
 
