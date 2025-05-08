@@ -1,3 +1,3 @@
 bottombound:0
 topbound:10
-missedequations:8,*,5,2
+missedequations:
