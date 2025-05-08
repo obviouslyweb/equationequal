@@ -2,7 +2,7 @@ public class Menu {
 
     // Attribute declaration
     private static String Menu1 = 
-                "\n[[ -- SPRINT SQUARED Main Menu -- ]]\n" +
+                "\n[[ -- EquationEqual -- ]]\n" +
                 "0) Quit to terminal\n" +
                 "1) Start game" +
                 "\n2) Replay missed questions" +
