@@ -56,6 +56,6 @@ I found these websites useful in developing this software:
 
 The following items I plan to fix, improve, and/or add to this project in the future:
 
-* [X] Verify equation creation doesn't make impossible to guess questions ( instances like `[ ] * 0 = 0` and `0 * [ ] = 0`).
-* [ ] Fix dividing handling ( ex. `4 / [] = 1`, inputting `4` is somehow incorrect).
+* [ ] Add in time average system, calculates time per evaluation in results screen
+* [ ] Implement hide operator mode (must be enabled in settings, would hide the evaluation operator for guessing)
 * [ ] Implement the ability to set bounds to negative numbers.
