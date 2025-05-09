@@ -56,6 +56,7 @@ I found these websites useful in developing this software:
 
 The following items I plan to fix, improve, and/or add to this project in the future:
 
+* [ ] Resolve negative bounds generation error
 * [ ] Add in time average system, calculates time per evaluation in results screen
 * [ ] Implement hide operator mode (must be enabled in settings, would hide the evaluation operator for guessing)
 * [ ] Implement the ability to set bounds to negative numbers.
