@@ -13,8 +13,8 @@ public class Equation {
     
     // Constructor declaration
     public Equation() {
-        firstnum = ThreadLocalRandom.current().nextInt(topbound + 1) - bottombound;
-        secondnum = ThreadLocalRandom.current().nextInt(topbound + 1) - bottombound;
+        firstnum = ThreadLocalRandom.current().nextInt(bottombound, topbound + 1);
+        secondnum = ThreadLocalRandom.current().nextInt(bottombound, topbound + 1);
         int operatorcheck = ThreadLocalRandom.current().nextInt(4);
         if ( operatorcheck == 0 ) {
             operator = "+";
@@ -25,13 +25,16 @@ public class Equation {
         } else if ( operatorcheck == 3 ) {
             operator = "/";
         }
-
+        
         // Divide by 0 handler
-        if ( ( secondnum == 0 ) && ( operator == "/" )) {
+        if ( ( secondnum == 0 ) && operator.equals("/")) {
             secondnum = 1;
         }
+
+        // Determine hidden number
         hiddennum = ThreadLocalRandom.current().nextInt(3);
 
+        // In the case of an impossible question, change the hidden number to end (i.e. 0 * [5] = 0)
         FixAmbiguousOperation();
     }
 
@@ -144,8 +147,12 @@ public class Equation {
                     // Functionality coming soon; shouldn't be called in current version anyway
             }
         } catch (ArithmeticException e) {
-            System.out.println("Math error during evaluation.");
-            return -1;
+            if (operator.equals("/") && secondnum == 0) {
+                return 0;
+            } else {
+                System.out.println("Math error during evaluation.");
+                return -1;
+            }
         }
         System.out.println("Unknown operator or hiddennum state.");
         return -1;
