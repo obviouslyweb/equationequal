@@ -176,7 +176,6 @@ public class Equation {
         } else {
             bottombound = BottomBoundPotential;
             topbound = TopBoundPotential;
-            SaveLoad.UpdateOptions(TopBoundPotential, BottomBoundPotential, Guesser.ReturnMissedEquations());
             System.out.println("Random number generator bounds set to " + bottombound + " and " + topbound + ".");
         }
     }
